@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+ 
+    <h:head>
+        <title>BeanValidation Example</title>
+    </h:head>
+    <h:body>
+    	
+    	<h:outputText value="Person (mit BeanValidation)"/>
+    	
+    	<h:form>
+    		<h:panelGrid columns="2">
+    			
+    			<h:outputLabel for="emailAddress" value="Email-Adresse:"/>
+    			<h:panelGroup>
+    			
+    				<h:inputText label="Email-Adresse" id="emailAddress" value="#{personBeanNeu.person.emailAddress}"/>
+			    	<h:message for="emailAddress"/>			
+    			</h:panelGroup>
+    			
+    			<h:outputLabel for="username" value="Username:"/>
+    			<h:panelGroup>
+    			
+    				<h:inputText label="Username" id="username" value="#{personBeanNeu.person.username}"/>
+			    	<h:message for="username"/>			
+    			</h:panelGroup>
+    			
+    		
+    			<h:outputLabel for="schuhgroesse" value="Schuhgröße:"/>
+    			<h:panelGroup>
+	    			<h:inputText label="Schuhgröße" id="schuhgroesse" value="#{personBeanNeu.person.schuhgröße}" />
+    				<h:message for="schuhgroesse"/>
+   				</h:panelGroup>
+    			
+    			<h:commandButton action="#{personBean.save}" value="Speichern"  />
+    			
+    		</h:panelGrid>
+    	</h:form>
+    	
+    
+    </h:body>
+</html>
